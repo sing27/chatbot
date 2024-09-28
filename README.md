@@ -68,3 +68,8 @@ Start Ollama:
   1:14━━●━━━━━──5:14
 
   ⇆       ◁      ❚❚      ▷       ↻+
+  
+<audio controls>
+  <source src="path/to/your/audio.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
