@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=d0o89z134CQ
 
 https://github.com/ollama/ollama
 
+https://cloud.google.com/speech-to-text/docs/encoding?hl=zh-cn
+
 To install Ollama, run the following command:
 
     curl -fsSL https://ollama.com/install.sh | sh
