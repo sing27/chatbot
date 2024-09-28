@@ -20,6 +20,7 @@ V2功能多(language_codes多選一最接近) 錢: https://cloud.google.com/spee
 
 --- Start AI chatbot---
 
+<<<<<<< HEAD
 Google Cloud Speech-To-Text API With Python For Beginners
 
 https://www.youtube.com/watch?v=izdDHVLc_Z0
@@ -36,6 +37,8 @@ V2功能多(language_codes多選一最接近) 錢: https://cloud.google.com/spee
 
 --- Start AI chatbot---
 
+=======
+>>>>>>> b69adc5f387266ef8800db20644c682a1a51d115
 https://github.com/ollama/ollama
 
 https://cloud.google.com/speech-to-text/docs/encoding?hl=zh-cn

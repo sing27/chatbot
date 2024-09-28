@@ -11,10 +11,14 @@ Create New Key  Type:Json
 IO庫將音頻文件轉換為二進制字符串
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b69adc5f387266ef8800db20644c682a1a51d115
 
 --- 有分同步 非同步 宣告 ---
 
 client = speech.SpeechClient(credentials=credentials) // speech.SpeechAsyncClient(....)
+<<<<<<< HEAD
 =======
 >>>>>>> ae9c22b (Update Note.md)
 =======
@@ -22,3 +26,5 @@ client = speech.SpeechClient(credentials=credentials) // speech.SpeechAsyncClien
 --- 有分同步 非同步 宣告 ---
 client = speech.SpeechClient(credentials=credentials) // speech.SpeechAsyncClient(....)
 >>>>>>> aa64529 (Update Note.md)
+=======
+>>>>>>> b69adc5f387266ef8800db20644c682a1a51d115
