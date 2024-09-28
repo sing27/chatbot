@@ -13,6 +13,7 @@ IO庫將音頻文件轉換為二進制字符串
 <<<<<<< HEAD
 
 --- 有分同步 非同步 宣告 ---
+
 client = speech.SpeechClient(credentials=credentials) // speech.SpeechAsyncClient(....)
 =======
 >>>>>>> ae9c22b (Update Note.md)
