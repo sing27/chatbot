@@ -1,5 +1,6 @@
 # chatbot
 
+https://www.youtube.com/watch?v=d0o89z134CQ
 https://github.com/ollama/ollama
 
 To install Ollama, run the following command:
