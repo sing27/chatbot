@@ -9,7 +9,7 @@ To install Ollama, run the following command:
     
 To run and chat with Llama 3.2:
 
-    ollama run llama3.2"
+    ollama run llama3.2
 
 Start Ollama:
 
