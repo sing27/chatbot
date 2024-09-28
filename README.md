@@ -70,6 +70,6 @@ Start Ollama:
   ⇆       ◁      ❚❚      ▷       ↻+
   
 <audio controls>
-  <source src="path/to/your/audio.wav" type="audio/wav">
+  <source src="TokiwoKizamuUta.mp3" type="TokiwoKizamuUta/mp3">
   Your browser does not support the audio tag.
 </audio>
