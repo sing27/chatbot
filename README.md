@@ -6,14 +6,14 @@ https://github.com/ollama/ollama
 To install Ollama, run the following command:
 
     curl -fsSL https://ollama.com/install.sh | sh
-    
-To run and chat with Llama 3.2:
-
-    ollama run llama3.2
 
 Start Ollama:
 
     ollama serve
+
+To run and chat with Llama 3.2:
+
+    ollama run llama3.2
 
 
 
