@@ -38,6 +38,8 @@ V2功能多(language_codes多選一最接近) 錢: https://cloud.google.com/spee
 
 https://github.com/ollama/ollama
 
+https://cloud.google.com/speech-to-text/docs/encoding?hl=zh-cn
+
 To install Ollama, run the following command:
 
     curl -fsSL https://ollama.com/install.sh | sh
