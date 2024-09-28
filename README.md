@@ -23,7 +23,11 @@ Start Ollama:
 
 
 
-正在循環播放《我愛香港》
+
+
+![J$~)47YM @ R$EFZW_C0 ON](https://github.com/user-attachments/assets/967d609c-23d9-488e-aa05-c78f0c04dcea)
+
+正在循環播放《我愛香港做IT》
 
   1:14━━●━━━━━──5:14
 
