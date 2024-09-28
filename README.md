@@ -1,10 +1,26 @@
 # chatbot
 
+Local AI chatbot
+
 https://www.youtube.com/watch?v=d0o89z134CQ
 
-https://github.com/ollama/ollama
+Google Cloud Speech-To-Text API With Python For Beginners
+
+https://www.youtube.com/watch?v=izdDHVLc_Z0
+
+--- Speech to text ---
 
 https://cloud.google.com/speech-to-text/docs/encoding?hl=zh-cn
+
+https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages?hl=zh-cn
+
+V2功能多(language_codes多選一最接近) 錢: https://cloud.google.com/speech-to-text/v2/docs/reference/rpc/google.cloud.speech.v2#google.cloud.speech.v2.RecognitionConfig
+
+
+
+--- Start AI chatbot---
+
+https://github.com/ollama/ollama
 
 To install Ollama, run the following command:
 
