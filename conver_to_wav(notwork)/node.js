@@ -4,7 +4,7 @@ var context = new AudioContext()
  
 // request the MP3 as binary
 xhr({
-  uri: 'audio/japan.m4a',
+  uri: './japan.m4a',
   responseType: 'arraybuffer'
 }, function (err, body, resp) {
   if (err) throw err
