@@ -12,7 +12,7 @@ Start Ollama:
 
     ollama serve
 
-To run and chat with Llama 3.2:
+(Option) To run and chat with Llama 3.2:
 
     ollama run llama3.2
 
