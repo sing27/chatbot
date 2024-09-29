@@ -16,6 +16,8 @@ https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages?
 
 V2功能多(language_codes多選一最接近) 錢: https://cloud.google.com/speech-to-text/v2/docs/reference/rpc/google.cloud.speech.v2#google.cloud.speech.v2.RecognitionConfig
 
+    pip install google-cloud-speech
+
 
 
 --- Start AI chatbot---
@@ -66,3 +68,4 @@ Start Ollama:
   1:14━━●━━━━━──5:14
 
   ⇆       ◁      ❚❚      ▷       ↻+
+  
