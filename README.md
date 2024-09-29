@@ -32,7 +32,11 @@ XX- Install voice utils -XX (need local test) ! no soundcards found in clould ho
 
     (useless)sudo apt-get install alsa-utils
 
-Can work from windows(?) : VS code > install pyhton > gcs > pyaudio
+Timeout only support v2
+
+https://stackoverflow.com/questions/76502806/python-google-speech-to-text-timeout-operation-was-cancelled
+
+Can work from windows : VS code > install pyhton > gcs > pyaudio
 
 --- Start AI chatbot---
 
