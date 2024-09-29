@@ -18,6 +18,14 @@ V2功能多(language_codes多選一最接近) 錢: https://cloud.google.com/spee
 
     pip install google-cloud-speech
 
+--- Streaming speech ---
+
+Install pyaudio
+
+    sudo apt-get update
+    sudo apt-get install python3-pyaudio portaudio19-dev
+    pip install pyaudio
+
 --- Start AI chatbot---
 
 https://github.com/ollama/ollama
