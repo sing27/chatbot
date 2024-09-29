@@ -28,6 +28,10 @@ Install pyaudio
     sudo apt-get install python3-pyaudio portaudio19-dev
     pip install pyaudio
 
+Install voice utils (need?) !!no soundcards found
+
+    sudo apt-get install alsa-utils
+
 --- Start AI chatbot---
 
 https://github.com/ollama/ollama
