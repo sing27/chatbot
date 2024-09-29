@@ -28,9 +28,11 @@ Install pyaudio
     sudo apt-get install python3-pyaudio portaudio19-dev
     pip install pyaudio
 
-Install voice utils (need?) !!no soundcards found
+XX- Install voice utils -XX (need local test) ! no soundcards found in clould hosted
 
-    sudo apt-get install alsa-utils
+    (useless)sudo apt-get install alsa-utils
+
+Can work from windows(?) : VS code > install pyhton > gcs > pyaudio
 
 --- Start AI chatbot---
 
