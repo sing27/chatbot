@@ -14,8 +14,3 @@ IO庫將音頻文件轉換為二進制字符串
 
 client = speech.SpeechClient(credentials=credentials) // speech.SpeechAsyncClient(....)
 
-
---- 有分同步 非同步 宣告 ---
-
-client = speech.SpeechClient(credentials=credentials) // speech.SpeechAsyncClient(....)
-
