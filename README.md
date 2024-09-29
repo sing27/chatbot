@@ -42,6 +42,8 @@ Can work from windows : VS code > install pyhton > gcs > pyaudio
 
 https://github.com/ollama/ollama
 
+https://github.com/ollama/ollama-python
+
 https://cloud.google.com/speech-to-text/docs/encoding?hl=zh-cn
 
 To install Ollama, run the following command:
