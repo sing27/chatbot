@@ -4,6 +4,7 @@ import re
 import sys
 
 from google.cloud import speech
+from google.oauth2 import service_account
 
 import pyaudio
 
@@ -173,6 +174,9 @@ def listen_print_loop(responses: object) -> str:
 
     return transcript
 
+client_file = 'SLL_demo.json'
+credentials = service_account.Credentials.from_service_account_file(client_file)
+
 
 def main() -> None:
     """Transcribe speech from audio file."""
@@ -180,7 +184,7 @@ def main() -> None:
     # for a list of supported languages.
     language_code = "en-US"  # a BCP-47 language tag
 
-    client = speech.SpeechClient()
+    client = speech.SpeechClient(credentials=credentials)
     config = speech.RecognitionConfig(
         encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
         sample_rate_hertz=RATE,
