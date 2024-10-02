@@ -1,3 +1,4 @@
+
 import queue
 import re
 import sys
@@ -5,6 +6,8 @@ import ollama
 
 from google.cloud import speech
 from google.oauth2 import service_account
+
+import time
 
 import pyaudio
 
@@ -111,6 +114,7 @@ class MicrophoneStream:
 
             yield b"".join(data)
 
+NO_INPUT_TIMEOUT_SECOND = 5
 
 def listen_print_loop(responses: object) -> str:
     """Iterates through server responses and prints them.
@@ -135,6 +139,8 @@ def listen_print_loop(responses: object) -> str:
     """
     num_chars_printed = 0
     final_transcript = ""  # Store the final transcript
+
+    init_time = time.time()
 
     for response in responses:
         if not response.results:
@@ -162,6 +168,10 @@ def listen_print_loop(responses: object) -> str:
             sys.stdout.flush()
 
             num_chars_printed = len(transcript)
+            print("Printed " + str(num_chars_printed))
+            if num_chars_printed:
+                init_time = time.time()
+                print("Set init time to " + str(init_time))
         
         else:
             print(transcript + overwrite_chars)
@@ -173,16 +183,24 @@ def listen_print_loop(responses: object) -> str:
                 print("Good Bye!")
                 break
 
-            if re.search(r"\b(請指教|please|お願いします)\b", transcript, re.I):
-                print("Loading...")
-                response = ollama.chat(model='llama3.2', messages=[
-                {
-                    'role': 'user',
-                    'content': final_transcript,
-                },
-                ])
-                print(response['message']['content'])
-                final_transcript = ""  # Reset final transcript
+            # if re.search(r"\b(請指教|please|お願いします)\b", transcript, re.I)
+            
+            print("it is now" + str(time.time()) + 'test' + str(init_time + NO_INPUT_TIMEOUT_SECOND))
+            if init_time + NO_INPUT_TIMEOUT_SECOND <= time.time():
+                print('passing')
+                print("Tested " + str(init_time + NO_INPUT_TIMEOUT_SECOND) + "passed")
+                continue
+
+            print("Loading...")
+            # response = ollama.chat(model='llama3.2', messages=[
+            #     {
+            #         'role': 'user',
+            #         'content': final_transcript,
+            #     },
+            #     ])
+            # print(response['message']['content'])
+            # final_transcript = ""
+
 
             num_chars_printed = 0
 
@@ -193,6 +211,7 @@ def listen_print_loop(responses: object) -> str:
 
 
 client_file = 'SLL_demo.json'
+
 credentials = service_account.Credentials.from_service_account_file(client_file)
 
 
@@ -200,7 +219,7 @@ def main() -> None:
     """Transcribe speech from audio file."""
     # See http://g.co/cloud/speech/docs/languages
     # for a list of supported languages.
- #   alternative_language_code = ['ja-JP', 'en-US']  # a BCP-47 language tag 'ja-JP' 'en-US' 'yue-Hant-HK' 'cmn-Hans-CN'
+    alternative_language_code = ['ja-JP', 'en-US']  # a BCP-47 language tag 'ja-JP' 'en-US' 'yue-Hant-HK' 'cmn-Hans-CN'
 
     client = speech.SpeechClient(credentials=credentials)
     config = speech.RecognitionConfig(
@@ -216,6 +235,7 @@ def main() -> None:
     )
 
     with MicrophoneStream(RATE, CHUNK) as stream:
+        print("Starting Now")
         audio_generator = stream.generator()
         requests = (
             speech.StreamingRecognizeRequest(audio_content=content)
