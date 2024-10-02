@@ -1,0 +1,28 @@
+import threading
+import time
+
+# Create an Event object
+stop_event = threading.Event()
+
+def wait_for_input():
+    """Function to wait for user input."""
+    input("Press Enter to continue or wait for 5 seconds to exit...\n")
+    stop_event.set()  # Set the event if input is received
+
+# Start the input waiting thread
+input_thread = threading.Thread(target=wait_for_input)
+input_thread.start()
+
+# Main thread waits for 5 seconds or until the event is set
+print("Waiting for 5 seconds or until input is received...")
+for _ in range(5):
+    if stop_event.is_set():
+        print("Input received, exiting...")
+        break
+    time.sleep(1)
+else:
+    print("No input received. Exiting program.")
+
+
+# Clean up
+input_thread.join()  # Ensure the input thread finishes before exiting
