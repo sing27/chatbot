@@ -58,7 +58,13 @@ Start Ollama:
 
     ollama run llama3.2
 
+--- short video and image input with gemini (Talking Character)---
 
+https://developers.googleblog.com/zh-hans/powering-talking-characters-with-generative-ai/
+
+https://github.com/google/generative-ai-docs/tree/main
+
+https://vscode.dev/github/google/generative-ai-docs/tree/main/demos/palm/web/talking-character?vscode-lang=zh-cn
 
 
 
