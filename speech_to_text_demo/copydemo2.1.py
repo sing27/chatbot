@@ -184,7 +184,7 @@ def listen_print_loop(responses: object) -> str:
                 print(response['message']['content'])
                 final_transcript = ""  # Reset final transcript   """
 
-            num_chars_printed = 0
+                num_chars_printed = 0
 
     return transcript
 
