@@ -1,6 +1,8 @@
 import queue
 import re
 import sys
+import time
+import threading
 #import ollama
 
 from google.cloud import speech
@@ -111,6 +113,27 @@ class MicrophoneStream:
 
             yield b"".join(data)
 
+# threading
+X = 5
+time_started = time.time()
+running = True # 线程的运行状态
+pause_event = threading.Event() # 用于控制线程的暂停和继续
+
+def timer():
+    global time_started, running
+    time_check = 0
+    while running:
+        pause_event.wait()
+        if time.time() > time_started + X:
+            print("time up")
+            time_started = time.time()
+            continue  # or raise TimeoutException()
+        print (time_check) # do whatever you need to do
+        time.sleep(1)
+        time_check += 1
+
+t1 = threading.Thread(target=timer)
+
 
 def listen_print_loop(responses: object) -> str:
     """Iterates through server responses and prints them.
@@ -173,6 +196,8 @@ def listen_print_loop(responses: object) -> str:
                 print("Good Bye!")
                 break
 
+            num_chars_printed = 0
+
     """        if re.search(r"\b(請指教|please|お願いします)\b", transcript, re.I):
                 print("Loading...")
                 response = ollama.chat(model='llama3.2', messages=[
@@ -182,9 +207,8 @@ def listen_print_loop(responses: object) -> str:
                 },
                 ])
                 print(response['message']['content'])
-                final_transcript = ""  # Reset final transcript   """
-
-                num_chars_printed = 0
+                final_transcript = ""  # Reset final transcript   
+                num_chars_printed = 0 """
 
     return transcript
 
@@ -223,6 +247,8 @@ def main() -> None:
         )
 
         responses = client.streaming_recognize(streaming_config, requests)
+
+        t1.start()
 
         # Now, put the transcription responses to use.
         listen_print_loop(responses)

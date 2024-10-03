@@ -20,7 +20,7 @@ audio = speech.RecognitionAudio(content=content)
 
 # 宣告音頻metadata / Set language_code='und' (for "undetermined")  D: 'en-US' 'ja-JP' 'yue-Hant-HK' 'cmn-Hans-CN'
 # for loop find the best confidence !!! 越多language_codes 越多api
-language_codes = ['yue-Hant-HK', 'ja-JP']
+language_codes = ['ja-JP']
 best_confidence = 0
 best_transcript = ''
 best_language = ''

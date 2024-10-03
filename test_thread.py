@@ -9,7 +9,7 @@ time_started = time.time()
 running = True # 线程的运行状态
 pause_event = threading.Event() # 用于控制线程的暂停和继续
 
-def timecheck():
+def timer():
     global time_started, running
     time_check = 0
     while running:
@@ -22,7 +22,7 @@ def timecheck():
         time.sleep(1)
         time_check += 1
 
-t1 = threading.Thread(target=timecheck)
+t1 = threading.Thread(target=timer)
 
 
 
